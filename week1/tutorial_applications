@@ -2,7 +2,7 @@
 TUTORIAL 1: CHECKING STRINGS - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[ done ] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -10,14 +10,14 @@ CONNECTING TO MY DATA:
 
 1. Did I identify any string-related questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [ ] YES - Question #(s): ____why is the capitalisation of treatment descriptions not consistent?_______
    [ ] NO - Skip to question 4
 
 
 2. If YES, which technique from this tutorial could help address my question?
 
    [ ] str_to_lower() - standardize capitalization
-   [ ] str_to_upper() - standardize capitalization  
+   [ this one ] str_to_upper() - standardize capitalization  
    [ ] str_trim() - remove leading/trailing whitespace
    [ ] str_replace() - fix typos or inconsistent spellings
    [ ] Other: ___________
@@ -26,16 +26,16 @@ CONNECTING TO MY DATA:
 
 3. Show what this technique would DO to my data:
 
-   Variable name: ___________
+   Variable name: ___treatment________
    
    Example values BEFORE:
-   - 
-   - 
+   - high_dose
+   - medium_dose
    - 
    
    What they would become AFTER:
-   - 
-   - 
+   - High_dose
+   - Medium_dose
    - 
 
 
@@ -53,7 +53,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 2: CHECKING DATES - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[ done ] I completed the tutorial exercises
 
 
 
@@ -62,30 +62,33 @@ CONNECTING TO MY DATA:
 
 1. Did I identify any date-related questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [this one ] YES - Question #(s): ___Are all collection dates consistently formatted?________
    [ ] NO - Skip to question 5
 
 
 2. If YES, which technique from this tutorial could help address my question?
 
-   [ ] dmy() / ymd() / mdy() - parse dates in different formats
+   [ this one] dmy() / ymd() / mdy() - parse dates in different formats
    [ ] excel_numeric_to_date() - convert Excel serial numbers
-   [ ] Checking for impossible dates (wrong day/month/year)
+   [ this one] Checking for impossible dates (wrong day/month/year)
    [ ] Other: ___________
    [ ] None of these apply
 
 
 3. Show what this technique would DO to my data:
 
-   Variable name: ___________
+   Variable name: ___collection_date________
    
    Example values BEFORE:
-   - 
-   - 
-   - 
+   - 2023-05-23
+
+   - 2023-08-27
+
+  - 2024-01-15
+   
    
    What they would become AFTER:
-   - 
+   - No change, dates are correctly formatted.
    - 
    - 
 
@@ -94,14 +97,13 @@ CONNECTING TO MY DATA:
 
    What assumption am I making about date format?
    (e.g., "01/12/2023 is DD/MM/YYYY not MM/DD/YYYY")
-   
+   The assumption is that the date format is DD/MM/YYYY
    
    What could go wrong if this assumption is incorrect?
-   
+   If the assumption is incorrect it could lead to errors in data handling, statistics about the data and leading to incorrect ordering of samples.
    
    How could I verify my assumption is correct?
-   
-
+   Check that all months are ≤ 12 and days ≤ 31. Compare dates across related variables.
 
 5. If this tutorial is NOT relevant to my data:
 
@@ -109,7 +111,7 @@ CONNECTING TO MY DATA:
    [ ] I don't have any date variables
    [ ] My dates are already in proper format
    [ ] My date issues are different from what this tutorial covers
-   [ ] Other: ___________
+   [this one ] Other: ____Not applicable because the tutorial is relevant._______
 
 
 ================================================================================
@@ -117,7 +119,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 3: CHECKING MISSING DATA PATTERNS - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[ done ] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -125,32 +127,32 @@ CONNECTING TO MY DATA:
 
 1. Did I identify any missing data questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [this one ] YES - Question #(s): ____Why are there null values in the dataset?_______
    [ ] NO - But I'll check anyway (missing data is common)
 
 
 2. Which variables have the most missing data?
 
-   Variable: ___________ | Percent missing: _____%
-   Variable: ___________ | Percent missing: _____%
+   Variable: ______eggs hatched_____ | Percent missing: _7.8____%
+   Variable: ____eggs laid_______ | Percent missing: ___7.8%__%
    Variable: ___________ | Percent missing: _____%
 
 
 3. Missingness types checklist
 
 
-   [ ] MCAR (Missing Completely At Random) - appears random/scattered
+   [ this one] MCAR (Missing Completely At Random) - appears random/scattered
    [ ] MAR (Missing At Random) - related to other observed variables
    [ ] MNAR (Missing Not At Random) - related to the missing value itself
 
 Why is it important to know what type of missing data we have? 
-
+It is important to know what type of missing data we have because it can directly affect the conculusions and statistics we draw from the data.
 ================================================================================
 ================================================================================
 TUTORIAL 4: CHECKING DUPLICATES - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[done ] I completed the tutorial exercises
 
 
 CONNECTING TO MY DATA:
@@ -159,16 +161,16 @@ CONNECTING TO MY DATA:
 1. Did I identify any duplicate-related questions in my Week 1 questions list?
 
    [ ] YES - Question #(s): ___________
-   [ ] NO - But I'll check anyway
+   [ this one] NO - But I'll check anyway
 
 
 3. Think about consequences:
 
    If I remove duplicates, what am I assuming?
-   
+   If duplicates are removed, the assumption is made that none of the data repeated as it is.
    
    If duplicates are actually repeated measures, what should I do instead?
-   [ ] Keep them - they're legitimate observations
+   [ this one] Keep them - they're legitimate observations
    [ ] Flag them for later analysis that accounts for non-independence
    [ ] Other: ___________
    
@@ -178,7 +180,7 @@ CONNECTING TO MY DATA:
 TUTORIAL 5: NUMERIC & CROSS-VARIABLE CONSISTENCY - APPLICATION CHECKLIST
 ================================================================================
 
-[ ] I completed the tutorial exercises
+[ done ] I completed the tutorial exercises
 
 
 PART A: NUMERIC PLAUSIBILITY
@@ -186,20 +188,20 @@ PART A: NUMERIC PLAUSIBILITY
 
 1. Did I identify any numeric plausibility questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [this one ] YES - Question #(s): ____Numeric validity of body mass measurements_______
    [ ] NO - Skip to Part B
 
 
 2. If YES, which numeric variable looks suspicious?
 
-   Variable name: ___________
+   Variable name: ___body_mass_mg________
    
-   Minimum value: _____  | Is this biologically possible? [ ] Yes [ ] No [ ] Unsure
-   Maximum value: _____  | Is this biologically possible? [ ] Yes [ ] No [ ] Unsure
+   Minimum value: __-87 mg___  | Is this biologically possible? [ ] Yes [ ] No [. ] Unsure
+   Maximum value: _109 mg____  | Is this biologically possible? [ ] Yes [ ] No [ ] Unsure[.]
    
 
    Why do these look wrong?
-   [ ] Negative value (impossible for this measurement)
+   [ this one] Negative value (impossible for this measurement)
    [ ] Zero (should be NA instead)
    [ ] Too large (exceeds known biological maximum)
    [ ] Too small (below known biological minimum)
@@ -213,38 +215,38 @@ PART B: CROSS-VARIABLE CONSISTENCY
 
 4. Did I identify any cross-variable questions in my Week 1 questions list?
 
-   [ ] YES - Question #(s): ___________
+   [ this one] YES - Question #(s): _____Consistency between egg production and egg hatching______
    [ ] NO - But I'll check anyway
 
 
 5. Choose TWO variables that should be related (e.g., body length and body mass,
    sex and reproductive status, species and location):
 
-   Variable 1: ___________
-   Variable 2: ___________
+   Variable 1: ___eggs_laid________
+   Variable 2: ____eggs_hatched_______
    
    What relationship do I expect between them?
    [ ] Positive correlation (both increase together)
    [ ] Negative correlation (one increases, other decreases)
-   [ ] Biological constraint (certain combinations impossible)
+   [ this one] Biological constraint (certain combinations impossible)
    [ ] Spatial constraint (certain combinations shouldn't occur)
    [ ] Other: ___________
    
    Describe the expected relationship:
-   
+   The number of eggs hatched cannot exceed the number of eggs laid. If eggs_laid = 0, then eggs_hatched must also be 0. Any violation indicates a data inconsistency or recording error.
 
 
 6. Think about consequences:
 
    If these variables are inconsistent, what should I do?
    [ ] Remove the observations
-   [ ] Convert one variable to NA (which one? _________)
-   [ ] Flag for review but keep both
+   [ this one] Convert one variable to NA (which one? _________)
+   [ this one] Flag for review but keep both
    [ ] Query the data collector
    [ ] Other: ___________
    
    Justification:
-   
+   Eggs hatching without eggs being laid is biologically impossible, suggesting an error in eggs_laid or eggs_hatched. the inconsistent value should be set to NA and the record flagged rather than removed, preserving the rest of the biological information.
 
 
 ================================================================================
