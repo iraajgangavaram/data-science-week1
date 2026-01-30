@@ -2,6 +2,7 @@ I want to learn about pull requests.
 questions:
 1. Why are there null values in the dataset?
 2. why is the age of some mosquitos less by a large margin. example, ages 20 and 25?
-3. how can body mass be null for a mosquito?
-4. why is there no collector for the female id = 40?
-5. why are there no eggs laid for multiple ids?
+3. Numeric validity of body mass measurements?
+4. Consistency between egg production and egg hatching?
+5. why is the capitalisation of treatment descriptions not consistent?
+6. Are all collection dates consistently formatted?

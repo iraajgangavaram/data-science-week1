@@ -1,7 +1,7 @@
 WEEK 2 CLEANING PLAN
 ====================
-Name: [your name]
-Date: [date]
+Name: [Iraaj Gangavaram]
+Date: [30 January 2026]
 
 I've completed all 5 tutorials and application checklists.
 
@@ -11,44 +11,44 @@ to address in Week 2:
 
 ISSUE 1 (Most Important)
 -------------------------
-Brief description: [What's the problem? 1 sentence]
+Brief description: [Consistency between egg production and egg hatching]
 
-Which tutorial provides the solution: [Tutorial name/number]
+Which tutorial provides the solution: [Tutorial 5]
 
-Which variable(s) affected: [Variable name(s)]
+Which variable(s) affected: [eggs_laid, eggs_hatched]
 
-Why this is important to fix: [Biological/analytical reason]
+Why this is important to fix: [Number of eggs hatched cannot be greater than number of eggs laid.]
 
-What I plan to do: [The technique I'll use, in plain English]
+What I plan to do: [Check for inconsistencies in the data, and make the errors into null values.]
 
 
 
 ISSUE 2 (Second Most Important)
 --------------------------------
-Brief description: [What's the problem? 1 sentence]
+Brief description: [Numeric validity of body mass measurements]
 
-Which tutorial provides the solution: [Tutorial name/number]
+Which tutorial provides the solution: [Tutorial 5]
 
-Which variable(s) affected: [Variable name(s)]
+Which variable(s) affected: [body_mass_mg]
 
-Why this is important to fix: [Biological/analytical reason]
+Why this is important to fix: [The body mass of a mosquito cant be negative.]
 
-What I plan to do: [The technique I'll use, in plain English]
+What I plan to do: [Make the negative values into null values.]
 
 
 
 OTHER ISSUES I NOTICED (but won't fix in Week 2)
 -------------------------------------------------
-- [Issue 3 - will address later if time]
-- [Issue 4 - uncertain how to handle]
-- [Issue 5 - decided to leave as-is because...]
+- [capitalisation of treatment descriptions is not consistent]
+- [Numeric validity of body mass measurements - uncertain how to handle]
+- [Are all collection dates consistently formatted - decided to leave as-is because collection dates look like they are correctly formatted.]
 
 
 QUESTIONS TO DISCUSS IN WEEK 2
 -------------------------------
 Things I'm still unsure about:
 
-1. 
+1. Numeric validity of body mass measurements
 
 2. 
 
