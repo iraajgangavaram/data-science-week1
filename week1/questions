@@ -1,8 +1,8 @@
 I want to learn about pull requests.
 questions:
-1. Why are there null values in the dataset?
-2. why is the age of some mosquitos less by a large margin. example, ages 20 and 25?
-3. Numeric validity of body mass measurements?
-4. Consistency between egg production and egg hatching?
-5. why is the capitalisation of treatment descriptions not consistent?
-6. Are all collection dates consistently formatted?
+1.Strings (categories): Are there inconsistent spellings/capitalisation/whitespace in categorical variables like species, island, sex, or clutch_completion that would create duplicate levels (e.g., "MALE" vs "male" vs "MALE ")?
+2.Dates (format/parsing): Is date_egg consistently stored as DD/MM/YYYY, and does converting it with lubridate::dmy() produce any parsing warnings or NAs that suggest inconsistent date entry?
+3.Missing data (impact on summaries): Which variables have the most missing values (e.g., delta_15n, delta_13c, sex, and the morphology measures), and how does missingness affect grouped summaries like mean(body_mass_g) by species when na.rm=FALSE vs na.rm=TRUE?
+4.Duplicates (rows/IDs): Are there any fully duplicated rows in penguins_clean_names, and are there any duplicated individual_id values that indicate repeated measures (multiple records per penguin) rather than data entry duplicates?
+5.Numeric plausibility (ranges/outliers): Are the ranges of numeric variables (body_mass_g, flipper_length_mm, culmen_length_mm, culmen_depth_mm, delta_15n, delta_13c) biologically plausible, and are there any impossible values (≤0 for mass/length) or extreme outliers that need investigation?
+6.Cross-variable consistency (expected relationships): Do body_mass_g and flipper_length_mm show the expected positive relationship within species, and are there any records that strongly violate this pattern (e.g., very heavy mass with very short flippers) suggesting measurement/unit/species-recording issues?

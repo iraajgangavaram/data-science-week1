@@ -11,38 +11,41 @@ to address in Week 2:
 
 ISSUE 1 (Most Important)
 -------------------------
-Brief description: [Consistency between egg production and egg hatching]
+Brief description: [Strings (categories): Are there inconsistent spellings/capitalisation/whitespace 
+in categorical variables like species, island, sex, or clutch_completion 
+that would create duplicate levels (e.g., "MALE" vs "male" vs "MALE ")? ]
 
-Which tutorial provides the solution: [Tutorial 5]
+Which tutorial provides the solution: [Tutorial 1]
 
-Which variable(s) affected: [eggs_laid, eggs_hatched]
+Which variable(s) affected: [ species]
 
-Why this is important to fix: [Number of eggs hatched cannot be greater than number of eggs laid.]
+Why this is important to fix: [ This is important to fix because if it isnt fixed then there would be inconsistencies in the spellings 
+which would affect the way the data looks.]
 
-What I plan to do: [Check for inconsistencies in the data, and make the errors into null values.]
+What I plan to do: [ Run code to fix the inconsistent spellings]
 
 
 
 ISSUE 2 (Second Most Important)
 --------------------------------
-Brief description: [Numeric validity of body mass measurements]
+Brief description: [Is date_egg consistently stored as DD/MM/YYYY, and does converting it with lubridate::dmy() 
+produce any parsing warnings or NAs that suggest inconsistent date entry?]
 
-Which tutorial provides the solution: [Tutorial 5]
+Which tutorial provides the solution: [Tutorial 2]
 
-Which variable(s) affected: [body_mass_mg]
+Which variable(s) affected: [date_gg]
 
-Why this is important to fix: [The body mass of a mosquito cant be negative.]
+Why this is important to fix: [There could be errors in interpreting the dates which could lead to errors in data analysis
+performed about it.]
 
-What I plan to do: [Make the negative values into null values.]
+What I plan to do: [Run code to standardise all the dates.]
 
 
 
 OTHER ISSUES I NOTICED (but won't fix in Week 2)
 -------------------------------------------------
-- [capitalisation of treatment descriptions is not consistent]
-- [Numeric validity of body mass measurements - uncertain how to handle]
-- [Are all collection dates consistently formatted - decided to leave as-is because collection dates look like they are correctly formatted.]
-
+- Which variables have the most missing values (e.g., delta_15n, delta_13c, sex, and the morphology measures), and 
+how does missingness affect grouped summaries like mean(body_mass_g) by species when na.rm=FALSE vs na.rm=TRUE?
 
 QUESTIONS TO DISCUSS IN WEEK 2
 -------------------------------
