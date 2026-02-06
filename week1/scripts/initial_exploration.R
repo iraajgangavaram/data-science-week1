@@ -108,3 +108,35 @@ glimpse(mosquito)
   mosquito_new |> 
     filter(if_any(everything(), is.na)) # selects all columns in order for the NAs
   
+#issues from Farren's github.
+  
+  # FIX 1: [Multiple names for the same distinct value e.g. differences in capitalization. fix misspelled names for both site and treatment] ====
+  
+  # Show the problem:
+  mosquito_egg_data |> distinct(collector,site,treatment)
+  mosquito_egg_data |> distinct(site)
+  mosquito_egg_data |> distinct(treatment)
+  
+  # Fix it:
+  mosquito_egg_data_step1 <- mosquito_egg_data |>
+    # YOUR CODE HERE
+    mutate(collector = case_when(collector == "Smyth" ~ "Smith", collector == "Garci" ~ "Garcia",.default = as.character(collector)),
+           site = case_when(site == "Site C" ~ "Site_C", site == "Site-C" ~ "Site_C", site == "site_c" ~ "Site_C",
+                            site == "site_a" ~ "Site_A",site == "Site-A" ~ "Site_A",site == "Site A" ~ "Site_A",
+                            site == "site_b" ~ "Site_B",site == "Site-B" ~ "Site_B",site == "Site B" ~ "Site_B",.default = as.character(site)))
+  
+  mosquito_egg_data_step1 <- mosquito_egg_data_step1 |>
+    mutate(treatment = str_to_lower(treatment))
+  
+  # Verify it worked:
+  mosquito_egg_data_step1 |> distinct(collector)
+  mosquito_egg_data_step1 |> distinct(site)
+  mosquito_egg_data_step1 |> distinct(treatment)
+  
+  # What changed and why it matters:
+  # [Changed the characters for different variable names that were 
+  # likely to be misspellings of other names 
+  # e.g. Garcia as Garci or Smith as Smyth corrections reduces error from 
+  # splitting values into false groups, ensures values are stored 
+  # under the proper distinct names]
+  
